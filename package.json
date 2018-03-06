@@ -1,6 +1,6 @@
 {
   "name": "react-native-modal",
-  "version": "4.1.1",
+  "version": "5.2.0",
   "description": "An enhanced React-Native modal",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -8,7 +8,7 @@
     "lint": "eslint src",
     "precommit": "lint-staged",
     "test": "npm run lint",
-    "prettier": "prettier --write --print-width 100 --single-quote --trailing-comma all src/**/*.js",
+    "prettier": "prettier --write src/**/*.js",
     "reset": "watchman watch-del-all && rm -rf node_modules/ && npm cache clean && npm prune && yarn cache clean"
   },
   "keywords": [
@@ -23,30 +23,30 @@
     "animated"
   ],
   "author": "Mazzarolo Matteo",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/react-native-community/react-native-modal",
   "repository": {
     "type": "git",
     "url": "https://github.com/react-native-community/react-native-modal"
   },
   "dependencies": {
-    "prop-types": "15.5.10",
-    "react-native-animatable": "^1.2.3"
+    "prop-types": "15.6.0",
+    "react-native-animatable": "^1.2.4"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "4.5.0",
-    "eslint-plugin-react-app": "^1.0.2",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
+    "eslint-plugin-react-app": "^3.0.0",
     "husky": "0.14.3",
-    "lint-staged": "4.0.4",
-    "prettier": "1.6.1",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.10.2",
     "react": ">=15.0.0",
     "react-native": ">=0.24.0"
   },
   "lint-staged": {
     "*.js": [
-      "npm run test",
-      "npm run prettier",
+      "eslint src",
+      "prettier --write",
       "git add"
     ]
   }
